@@ -4,6 +4,13 @@
 
 # Session Data files
 .RData
+.sav
+.accdb
+.dta
+
+# Carpeta dades
+
+/dades
 
 # Example code in package build process
 *-Ex.R
