@@ -1,0 +1,98 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+
+---
+title: "Estudio [I N T E G R A]"
+
+
+
+
+
+author: "Rai Puig  &  Jordi Real"
+
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+rm(list=ls())
+library("data.table")
+library("SNPassoc")
+library("htmlwidgets")
+library("compareGroups")
+library("foreign")
+library("lattice")
+library("Hmisc")
+library("ggplot2")
+library("pander")
+library("readxl")
+library("rmarkdown")
+library("knitr")
+library("data.table")
+library("MatchIt")
+library("survival")
+library("plyr")
+library("dplyr")
+library("survminer")
+library("purrr")
+library("stringr")
+library("tidyverse")
+library("tidyr")
+library("purrr")
+library(data.table)
+library(foreign)
+library(dplyr)
+library(lattice)
+library(SNPassoc)
+library(haplo.stats)
+library(mvtnorm)
+library(parallel)
+```
+
+#### Estrategia de intervención integral en pacientes con mal control Glucémico de la DM2[INTEGRA_VISITA_HISTORIC_MES0]. 
+
+## 
+
+## Parte descriptiva:
+
+##
+
+
+
+```{r, message=FALSE, warning=FALSE, include=T, echo=FALSE,size="huge"}
+####  Llegir dades    #####
+#setwd("C:/Users/38122893W/Desktop/INTEGRA_FINAL")
+load("resultats/INTEGRA_VISITES_HISTORIQUES.Rdata")
+#Taula1 / Mes00 
+export2md(T00,caption="Análisi Descriptiu VISITA MES00  / GRUPS [Mediana-Min-Max]")
+export2md(T00B,caption="Análisi Descriptiu VISITA MES00 / GRUPS [Mitjana-Desv]")
+export2md(T00C,caption="Análisi Descriptiu vISITA MES00 [Mediana-Min-Max]")
+
+
+#Taula2 / Mes03 
+export2md(T03,caption="Análisi Descriptiu VISITA MES03  / GRUPS [Mediana-Min-Max]")
+export2md(T03B,caption="Análisi Descriptiu VISITA MES03 / GRUPS [Mitjana-Desv]")
+export2md(T03C,caption="Análisi Descriptiu vISITA MES03 [Mediana-Min-Max]")
+
+#Taula3 / Mes06 
+export2md(T06,caption="Análisi Descriptiu VISITA MES06  / GRUPS [Mediana-Min-Max]")
+export2md(T06B,caption="Análisi Descriptiu VISITA MES06 / GRUPS [Mitjana-Desv]")
+export2md(T06C,caption="Análisi Descriptiu vISITA MES06 [Mediana-Min-Max]")
+
+#Taula4 / Mes12 
+export2md(T12,caption="Análisi Descriptiu VISITA MES12  / GRUPS [Mediana-Min-Max]")
+export2md(T12B,caption="Análisi Descriptiu VISITA MES12 / GRUPS [Mitjana-Desv]")
+export2md(T12C,caption="Análisi Descriptiu vISITA MES12 [Mediana-Min-Max]")
+
+
+
+```
+
+
+

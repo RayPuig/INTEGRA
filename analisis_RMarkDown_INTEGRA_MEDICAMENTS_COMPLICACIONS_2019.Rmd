@@ -1,0 +1,83 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+
+---
+title: "Estudio [I N T E G R A]"
+
+
+
+
+
+author: "Rai Puig  &  Jordi Real"
+
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+rm(list=ls())
+library("data.table")
+library("SNPassoc")
+library("htmlwidgets")
+library("compareGroups")
+library("foreign")
+library("lattice")
+library("Hmisc")
+library("ggplot2")
+library("pander")
+library("readxl")
+library("rmarkdown")
+library("knitr")
+library("data.table")
+library("MatchIt")
+library("survival")
+library("plyr")
+library("dplyr")
+library("survminer")
+library("purrr")
+library("stringr")
+library("tidyverse")
+library("tidyr")
+library("purrr")
+library(data.table)
+library(foreign)
+library(dplyr)
+library(lattice)
+library(SNPassoc)
+library(haplo.stats)
+library(mvtnorm)
+library(parallel)
+```
+
+#### Estrategia de intervención integral en pacientes con mal control Glucémico de la DM2 Medicamentos  Y Complicaciones. 
+## 
+
+## Parte descriptiva:
+
+
+
+## 
+
+
+```{r, message=FALSE, warning=FALSE, include=T, echo=FALSE,size="huge"}
+####  Llegir dades    #####
+
+
+load("resultats/INTEGRA_VISITA_HISTORIC_BASAL_MEDICAMENTS_PROBLEMES.Rdata")
+#Taula1
+export2md(T1,caption="Análisi Descriptiu  Medicamentos MES00")
+
+#Taula2
+export2md(T2,caption="Análisi Descriptiu  Complicaciones MES00")
+
+
+```
+
+
+

@@ -2,6 +2,46 @@
 ####[29.5.2019]###
 ##[FUNCIONS RAI]##
 ##################
+#------------------------------------------------------------------------------------------#
+#                        0. SELECCIONAR VARIABLES! []
+#------------------------------------------------------------------------------------------#
+
+
+
+
+
+
+#[HEM DE SELECCIONAR ! i fer una funció senzilla!]
+
+#conductor_variables2<-"taulavariables_v3.xls"
+
+
+
+select_conductor<-function(dt=DT_VISITA_HISTORIC2_agg,taulavariables=conductor_variables2) {
+ 
+  #-----------------------------------------------
+  
+  #taulavariables="taulavariables_v3.xls"
+  #dt=DT_VISITA_HISTORIC2_agg
+  
+ 
+  
+  ####  Llegir conductor  i seleccionar ####
+  
+  variables <- readxl::read_excel(taulavariables)
+  variables[is.na(variables)]<- 0
+ 
+  arrimades<-variables
+  arrimades<-arrimades %>%dplyr::filter(taula0>0)
+  arrimades<-arrimades %>% dplyr::select(camp)%>% as.vector()
+  dt<-dt%>%dplyr::select(arrimades$camp)
+  dt
+  
+  #--------------------------------------------------
+  
+
+}
+
 
 
 #------------------------------------------------------------------------------------------#
