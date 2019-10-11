@@ -8,6 +8,9 @@
 .accdb
 .dta
 
+# docs no cal
+.html
+
 # Carpeta dades
 
 /dades
